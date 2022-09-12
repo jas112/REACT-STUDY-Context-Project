@@ -15,19 +15,12 @@ class NavBar extends Component {
     return (
         <div 
             className={classes.root}>
-            <AppBar 
-                position='static' 
-                color='primary'>
+            <AppBar position='static' color='primary'>
                 <Toolbar>
-                    <IconButton 
-                        className={classes.menuButton} 
-                        color='inherit'>
+                    <IconButton className={classes.menuButton} color='inherit'>
                         <span>😎</span>
                     </IconButton>
-                    <Typography 
-                        className={classes.title} 
-                        variant='h6' 
-                        color='inherit'>
+                    <Typography className={classes.title} variant='h6' color='inherit'>
                             Title
                     </Typography>
                     <Switch />
@@ -36,8 +29,7 @@ class NavBar extends Component {
                         <div className={classes.searchIcon}>
                             <SearchIcon />
                         </div>
-                        <InputBase 
-                            placeholder='Search...' 
+                        <InputBase placeholder='Search...' 
                             classes={{
                                 root: classes.inputRoot,
                                 input: classes.inputSearch }} />

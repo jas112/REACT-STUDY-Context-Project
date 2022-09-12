@@ -13,16 +13,28 @@ const styles = theme => ({
         }
 
     },
-    formPaper: {
+    paper: {
         marginTop: theme.spacing.unit * 8,
         display: 'flex',
         flexFlow: 'column nowrap',
         alignItems: 'center',
+        padding: `${theme.spacing.unit * 2}px ${theme.spacing.unit * 3}px ${theme.spacing.unit * 3}px`
     },
-    formAvatar: {
+    avatar: {
         marginTop: theme.spacing.unit,
         backgroundColor: theme.palette.secondary.main,
     },
+    form: {
+        width: '100%',
+        marginTop: theme.spacing.unit * 3,
+    },
+    formCheckbox: {
+        width: '100%',
+    },
+    submit:{
+        width: '100%',
+        marginTop: theme.spacing.unit * 3,
+    }
 
 });
 
