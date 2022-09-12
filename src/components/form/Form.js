@@ -30,10 +30,10 @@ class Form extends Component {
                 Sign In
             </Typography>
             <Select value='English'>
-                <MenuItem value='English'>English</MenuItem>
-                <MenuItem value='French'>French</MenuItem>
-                <MenuItem value='Japanese'>Japanese</MenuItem>
-                <MenuItem value='Spanish'>Spanish</MenuItem>
+                <MenuItem value='english'>English</MenuItem>
+                <MenuItem value='french'>French</MenuItem>
+                <MenuItem value='japanese'>Japanese</MenuItem>
+                <MenuItem value='spanish'>Spanish</MenuItem>
             </Select>
             <form className={classes.form}>
                 <FormControl margin='normal' required fullWidth>
