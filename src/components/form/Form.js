@@ -15,10 +15,21 @@ import Select from "@material-ui/core/Select";
 import withStyles from "@material-ui/core/styles/withStyles";
 import styles from "./styles/FormStyles";
 import { Check } from '@material-ui/icons';
+import {LanguageContext} from '../../contexts/languageContext/LanguageContext';
+
+const wordSets ={
+    english: {signIn: 'Sign In', email: 'Email', password: 'Password', rememberMe: 'Remember Me'},
+    french: {signIn: `S'identifier`, email: 'E-mail', password: 'Mot de Passe', rememberMe: 'Souviens-toi de Moi'},
+    japanese: {signIn: 'ログイン', email: 'Eメール', password: 'パスワード', rememberMe: '私を覚えてますか'},
+    spanish: {signIn: 'Registrarse', email: 'Email', password: 'Contraseña', rememberMe: 'Recuérdame'},
+};
 
 class Form extends Component {
+    static contextType = LanguageContext;
   render() {
+    const {currentLanguage, toggleLanguage} = this.context;
     const {classes} = this.props;
+    const {signIn, email, password, rememberMe} = wordSets[currentLanguage];
     return (
       <main 
       className={classes.main}>
@@ -27,9 +38,9 @@ class Form extends Component {
                 <LockOutlinedIcon />
             </Avatar>
             <Typography variant='h5'>
-                Sign In
+                {signIn}
             </Typography>
-            <Select value='English'>
+            <Select value={currentLanguage} onChange={toggleLanguage}>
                 <MenuItem value='english'>English</MenuItem>
                 <MenuItem value='french'>French</MenuItem>
                 <MenuItem value='japanese'>Japanese</MenuItem>
@@ -38,26 +49,26 @@ class Form extends Component {
             <form className={classes.form}>
                 <FormControl margin='normal' required fullWidth>
                     <InputLabel htmlFor='email'>
-                        Email
+                        {email}
                     </InputLabel>
                     <Input id='email' name='email' autoFocus>
                     </Input>
                 </FormControl>
                 <FormControl margin='normal' required fullWidth>
                     <InputLabel htmlFor='password'>
-                        Password
+                        {password}
                     </InputLabel>
                     <Input id='password'  name='password' autoFocus>
                     </Input>
                 </FormControl>
                 <FormControlLabel 
                     control={<Checkbox color='primary'/>}
-                    label='Rember Me'
+                    label={rememberMe}
                     className={classes.formCheckbox}
                 />
                 <Button 
                 variant='contained' type='submit' fullwidth='true' color='primary' className={classes.submit}>
-                    Sign In
+                    {signIn}
                 </Button>
             </form>
         </Paper>

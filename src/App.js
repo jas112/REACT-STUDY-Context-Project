@@ -4,15 +4,18 @@ import Form from "./components/form/Form";
 import PageContent from "./components/pageContent/PageContent";
 import './App.css';
 import { ThemeProvider } from "./contexts/themeContext/ThemeContext";
+import {LanguangeProvider} from './contexts/languageContext/LanguageContext';
 
 class App extends Component {
   render() {
     return (
       <ThemeProvider>
-        <PageContent>
-          <NavBar />
-          <Form />
-        </PageContent>
+        <LanguangeProvider>
+          <PageContent>
+            <NavBar />
+            <Form />
+          </PageContent>
+        </LanguangeProvider>
       </ThemeProvider>
     );
   }
