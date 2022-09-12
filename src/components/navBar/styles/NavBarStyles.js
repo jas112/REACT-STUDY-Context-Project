@@ -34,12 +34,30 @@ const styles = theme => ({
     },
     searchIcon: {
         width: theme.spacing.unit * 9,
-        height: '100%',
-        position: 'ablsolute',
+        height: '55%',
+        position: 'absolute',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
     },
+    inputRoot: {
+        color: 'inherit',
+        width: '100%',
+    },
+    inputSearch: {
+        paddingTop: theme.spacing.unit,
+        paddingRight: theme.spacing.unit,
+        paddingBottom: theme.spacing.unit,
+        paddingLeft: theme.spacing.unit * 10,
+        transition: theme.transitions.create('width'),
+        width: '100%',
+        [theme.breakpoints.up('sm')]: {
+            width: 120,
+            '&:focus': {
+                width: 200,
+            }
+        }
+    }
 });
 
 export default styles;

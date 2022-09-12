@@ -7,6 +7,7 @@ import SearchIcon from '@material-ui/icons/Search';
 import Switch from '@material-ui/core/Switch';
 import { withStyles } from '@material-ui/core/styles';
 import styles from './styles/NavBarStyles';
+import InputBase from "@material-ui/core/InputBase";
 
 class NavBar extends Component {
   render() {
@@ -35,6 +36,11 @@ class NavBar extends Component {
                         <div className={classes.searchIcon}>
                             <SearchIcon />
                         </div>
+                        <InputBase 
+                            placeholder='Search...' 
+                            classes={{
+                                root: classes.inputRoot,
+                                input: classes.inputSearch }} />
                     </div>
                 </Toolbar>
             </AppBar>
