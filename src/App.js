@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import NavBar from "./components/navBar/NavBar";
+import Form from "./components/form/Form";
 import './App.css';
 
 class App extends Component {
@@ -7,6 +8,7 @@ class App extends Component {
     return (
       <div className="App">
         <NavBar />
+        <Form />
       </div>
     );
   }
