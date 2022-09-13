@@ -8,8 +8,10 @@ import Switch from '@material-ui/core/Switch';
 import { withStyles } from '@material-ui/core/styles';
 import styles from '../navBar/styles/NavBarStyles';
 import InputBase from "@material-ui/core/InputBase";
-import {ThemeContext} from '../../contexts/themeContext/ThemeContext';
-import {LanguageContext} from '../../contexts/languageContext/LanguageContext';
+// import {ThemeContext} from '../../contexts/themeContext/ThemeContext';
+// import {LanguageContext} from '../../contexts/languageContext/LanguageContext';
+import { FunctionalThemeContext } from '../../contexts/functionalThemeContext/FunctionalThemeContext';
+import { FunctionalLanguageContext } from '../../contexts/functionalLanguageContext/FunctionalLanguageContext';
 
 const navContentSets = {
     english: {appTitle: 'App Title', search: 'Search', flag: '🇺🇸'},
@@ -20,9 +22,9 @@ const navContentSets = {
 
 function FunctionalNavBar(props) {
 
-    const {isDarkMode, toggleDarkMode} = useContext(ThemeContext);
+    const {isDarkMode, toggleDarkMode} = useContext(FunctionalThemeContext);
     const {classes} = props;
-    const {currentLanguage} = useContext(LanguageContext);
+    const {currentLanguage} = useContext(FunctionalLanguageContext);
     const {appTitle, search, flag} = navContentSets[currentLanguage];
 
   return (

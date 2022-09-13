@@ -15,7 +15,8 @@ import Select from "@material-ui/core/Select";
 import withStyles from "@material-ui/core/styles/withStyles";
 import styles from "../form/styles/FormStyles";
 import { Check } from '@material-ui/icons';
-import {LanguageContext} from '../../contexts/languageContext/LanguageContext';
+// import {LanguageContext} from '../../contexts/languageContext/LanguageContext';
+import { FunctionalLanguageContext } from '../../contexts/functionalLanguageContext/FunctionalLanguageContext';
 
 const wordSets ={
     english: {signIn: 'Sign In', email: 'Email', password: 'Password', rememberMe: 'Remember Me'},
@@ -26,7 +27,7 @@ const wordSets ={
 
 function FunctionalForm(props) {
 
-    const {currentLanguage, toggleLanguage} = useContext(LanguageContext);
+    const {currentLanguage, toggleLanguage} = useContext(FunctionalLanguageContext);
     const {classes} = props;
     const {signIn, email, password, rememberMe} = wordSets[currentLanguage];
 
