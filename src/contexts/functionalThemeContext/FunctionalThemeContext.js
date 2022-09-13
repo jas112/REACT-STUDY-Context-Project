@@ -1,11 +1,11 @@
 import React, {createContext, useState} from "react";
+import useToggle from "../../hooks/useToggle";
 
 export const FunctionalThemeContext = createContext();
 
 export function FunctionalThemeProvider(props) {
 
-    const [isDarkMode, setIsDarkMode] = useState(false);
-    const toggleDarkMode = () => setIsDarkMode(!isDarkMode);
+    const [isDarkMode, toggleDarkMode] = useToggle(false);
 
     return(
         <FunctionalThemeContext.Provider value={{isDarkMode, toggleDarkMode}}>
