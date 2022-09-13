@@ -1,7 +1,6 @@
 import React, {useContext} from 'react';
 import Avatar from "@material-ui/core/Avatar";
 import Button from "@material-ui/core/Button";
-import CssBaseline from "@material-ui/core/CssBaseline";
 import FormControl from "@material-ui/core/FormControl";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Checkbox from "@material-ui/core/Checkbox";
@@ -14,7 +13,6 @@ import MenuItem from "@material-ui/core/MenuItem";
 import Select from "@material-ui/core/Select";
 import withStyles from "@material-ui/core/styles/withStyles";
 import styles from "../form/styles/FormStyles";
-import { Check } from '@material-ui/icons';
 // import {LanguageContext} from '../../contexts/languageContext/LanguageContext';
 import { FunctionalLanguageContext } from '../../contexts/functionalLanguageContext/FunctionalLanguageContext';
 

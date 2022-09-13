@@ -1,4 +1,5 @@
-import React, { Component } from "react";
+// import React, { Component } from "react";
+import React from "react";
 // import NavBar from "./components/navBar/NavBar";
 // import Form from "./components/form/Form";
 // import PageContent from "./components/pageContent/PageContent";
@@ -11,31 +12,37 @@ import './App.css';
 import { FunctionalThemeProvider } from "./contexts/functionalThemeContext/FunctionalThemeContext";
 import { FunctionalLanguageProvider } from "./contexts/functionalLanguageContext/FunctionalLanguageContext";
 
-class App extends Component {
-  render() {
-    return (
+//with Class-based Components...
 
-      //with Class-based Components...
-      // <ThemeProvider>
-      //   <LanguangeProvider>
-      //     <PageContent>
-      //       <NavBar />
-      //       <Form />
-      //     </PageContent>
-      //   </LanguangeProvider>
-      // </ThemeProvider>
+// class App extends Component {
+//   render() {
+//     return (
+//       <ThemeProvider>
+//         <LanguangeProvider>
+//           <PageContent>
+//             <NavBar />
+//             <Form />
+//           </PageContent>
+//         </LanguangeProvider>
+//       </ThemeProvider>
+//     );
+//   }
+// }
 
-      //with Functional Components...
-      <FunctionalThemeProvider>
-        <FunctionalLanguageProvider>
-          <FunctionalPageContent>
-            <FunctionalNavBar />
-            <FunctionalForm />
-          </FunctionalPageContent>
-        </FunctionalLanguageProvider>
-      </FunctionalThemeProvider>
-    );
-  }
+// export default App;
+
+//with Functional Components...
+
+export default function App() {
+  return (
+    <FunctionalThemeProvider>
+      <FunctionalLanguageProvider>
+        <FunctionalPageContent>
+          <FunctionalNavBar />
+          <FunctionalForm />
+        </FunctionalPageContent>
+      </FunctionalLanguageProvider>
+    </FunctionalThemeProvider>
+  );
 }
 
-export default App;
